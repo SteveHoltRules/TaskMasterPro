@@ -66,7 +66,7 @@ $(".list-group").on("blur", "textarea", function () {
     .closest(".list-group")
     .attr("id")
     .replace("list-", "");
-  //get the task's postion in the list of otehr li elements
+  //get the task's postion in the list of other li elements
   var index = $(this)
     .closest(".list-group-item")
     .index();
