@@ -12,6 +12,10 @@ main h4 {
   font-family: 'Permanent Marker', Helvetica, sans-serif;
 }
 
+#trash {
+  font-family: 'Permanent Marker', Helvetica, sans-serif;
+}
+
 ul.list-group {
   min-height: 130px;
 }
