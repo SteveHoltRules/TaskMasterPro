@@ -145,6 +145,13 @@ var auditTask = function(taskEl) {
   if (moment().isAfter(time)) {
     $(taskEl).addClass("list-group-item-danger");
   }
+
+  if(moment().isAfter(time)) {
+    $(taskEl).addClass("list-group-item-danger");
+  }
+  else if(Math.abs(moment().diff(time, "days")) <=2) {
+    $(taskEl).addClass("list-group-item-warning");
+  }
   console.log(time);
 };
 
@@ -222,12 +229,10 @@ $(".list-group").on("click", "span", function () {
 //value of due date was change
 $(".list-group").on("change", "input[type='text']", function () {
   //get current text 
-  var date = $(this)
-    .val()
-    .trim();
+  var date = $(this).val();
 
   //get the parent ul's id attribute
-  var status = $(this)
+  var status = $(this).closest)
     .closest(".list-group")
     .attr("id")
     .replace("list-", "");
@@ -248,6 +253,8 @@ $(".list-group").on("change", "input[type='text']", function () {
 
   //replace input wiht span element
   $(this).replaceWith(taskSpan);
+
+
 });
 
 // modal was triggered
